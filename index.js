@@ -11,7 +11,8 @@ class countriesList {
   printCountries() {
     var db = []
     if(document.getElementById("searchcountry").value){
-      db = this.countries.filter(i => !i.name.indexOf(document.getElementById("searchcountry").value))
+      console.log("jdkslf")
+      db = this.countries.filter(i => !i.name.toLowerCase().indexOf(document.getElementById("searchcountry").value.toLowerCase()))
     } else {
       db = this.countries
     }
